@@ -46,12 +46,14 @@ export default function Hero() {
         className="flex-1 space-y-4"
       >
         <h1 className="font-playfair text-4xl font-bold md:text-6xl">
-          <span className="gradient-text">Creative</span>
+          <span className="gradient-text">Software</span>
           <br />
-          <span className="gradient-text">Developer</span>
+          <span className="gradient-text">Engineer</span>
         </h1>
         <p className="max-w-md text-lg text-gray-300">
-          Passionate about crafting beautiful and functional web experiences. Specialized in React, Node.js, and cloud technologies.
+          27-year-old software engineer with a passion for creating innovative solutions. Interested in Cybersecurity and IoT 🔐💻
+          Currently pursuing a Bachelor's degree at Tampere University of Applied Sciences 🎓
+          On my free time I like to play golf and play fetch with my dog ⛳️🐶
         </p>
       </motion.div>
       <motion.div
@@ -62,8 +64,8 @@ export default function Hero() {
       >
         <div className="mx-auto h-64 w-64 overflow-hidden rounded-full border-4 border-primary/20 md:h-80 md:w-80">
           <Image
-            src="public/ja.jpeg"
-            alt="John Doe"
+            src="/ja.jpg"
+            alt="Jasu Ahonen"
             width={320}
             height={320}
             className="object-cover"
@@ -114,4 +116,5 @@ export default function Hero() {
     </section>
   )
 }
+
 
