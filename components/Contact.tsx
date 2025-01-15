@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { FaEnvelope } from 'react-icons/fa'
+import { RiMailSendLine } from 'react-icons/ri'
 
 export default function Contact() {
   const [email, setEmail] = useState('')
@@ -22,7 +22,7 @@ export default function Contact() {
 
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl font-bold font-playfair gradient-text">Contact Me</h2>
+      <h2 className="text-2xl font-bold font-playfair text-gray-200 mb-6">Contact Me</h2>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,10 +31,7 @@ export default function Contact() {
       >
         <div className="space-y-4">
           <p className="text-gray-300">
-            I'm always open to new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out!
-          </p>
-          <p className="text-gray-300">
-            I'll do my best to respond within 24-48 hours. Looking forward to connecting with you!
+            I'm always open to new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out! 👋
           </p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -53,8 +50,8 @@ export default function Contact() {
             required
             className="bg-gray-800/50 border-gray-700 text-gray-100 min-h-[150px]"
           />
-          <Button type="submit" className="bg-primary hover:bg-primary/90 text-gray-900">
-            <FaEnvelope className="mr-2" />
+          <Button type="submit" className="bg-black">
+            <RiMailSendLine className="mr-2" />
             Send Message
           </Button>
         </form>

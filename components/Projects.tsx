@@ -29,7 +29,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl font-bold font-playfair gradient-text">Featured Projects</h2>
+      <h2 className="text-2xl font-bold font-playfair text-gray-200 mb-6">Featured Projects</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div

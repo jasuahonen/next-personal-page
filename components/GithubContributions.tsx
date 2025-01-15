@@ -44,7 +44,7 @@ export default function GithubContributions() {
   return (
     <section className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold font-playfair gradient-text">GitHub Contributions</h2>
+        <h2 className="text-2xl font-bold font-playfair text-gray-200 mb-6">GitHub Contributions</h2>
         <Select onValueChange={setSelectedYear} defaultValue={selectedYear}>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Select year" />
@@ -62,7 +62,7 @@ export default function GithubContributions() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 overflow-x-auto"
+        className="bg-black/50 backdrop-blur-sm rounded-lg p-6 overflow-x-auto"
       >
         <div className="grid grid-flow-col gap-1">
           <div className="grid grid-rows-7 gap-1 text-xs text-right pr-2">

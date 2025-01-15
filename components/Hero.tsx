@@ -4,30 +4,45 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
-import { FaMicrosoft, FaAmazon } from 'react-icons/fa'
+import { FaAws} from 'react-icons/fa'
 import { SiCisco } from 'react-icons/si'
+import { VscAzure } from 'react-icons/vsc'
+import { GiLockedFortress } from "react-icons/gi";
 
 const certifications = [
   {
-    icon: FaMicrosoft,
-    count: 3,
+    icon: GiLockedFortress,
+    count: 4,
+    iconColor: "text-gray-400",
     details: [
-      "Microsoft Certified: Azure Fundamentals",
-      "Microsoft Certified: Azure Developer Associate",
-      "Microsoft Certified: Azure Solutions Architect Expert"
+      "CompTIA Security+",
+      "Cybersecurity Architect",
+      "Elements of Cloud and Cybersecurity",
+      "Cybersecurity Fundamentals"
     ]
   },
   {
-    icon: FaAmazon,
-    count: 2,
+    icon: VscAzure,
+    count: 3,
+    iconColor: "text-blue-500",
+    details: [
+      "Azure Fundamentals",
+      "Azure Administrator",
+      "Azure Security Technologies"
+    ]
+  },
+  {
+    icon: FaAws,
+    count: 1,
+    iconColor: "text-yellow-500",
     details: [
       "AWS Certified Cloud Practitioner",
-      "AWS Certified Developer - Associate"
     ]
   },
   {
     icon: SiCisco,
     count: 1,
+    iconColor: "text-blue-300",
     details: [
       "Cisco Certified Network Associate (CCNA)"
     ]
@@ -46,13 +61,15 @@ export default function Hero() {
         className="flex-1 space-y-4"
       >
         <h1 className="font-playfair text-4xl font-bold md:text-6xl">
-          <span className="gradient-text">Software</span>
+          <span className="text-gray-200">Software</span>
           <br />
-          <span className="gradient-text">Engineer</span>
+          <span className="text-gray-200">Engineer</span>
         </h1>
         <p className="max-w-md text-lg text-gray-300">
           27-year-old software engineer with a passion for creating innovative solutions. Interested in Cybersecurity and IoT 🔐💻
+          <br /><br />
           Currently pursuing a Bachelor's degree at Tampere University of Applied Sciences 🎓
+          <br /><br />
           On my free time I like to play golf and play fetch with my dog ⛳️🐶
         </p>
       </motion.div>
@@ -87,7 +104,7 @@ export default function Hero() {
                 >
                   <CardContent className="p-4">
                     <div className="flex flex-col items-center justify-center">
-                      <cert.icon className="text-3xl text-primary mb-2" />
+                      <cert.icon className={`text-3xl mb-2 ${cert.iconColor}`} />
                       <span className="text-lg font-medium text-primary">{cert.count}</span>
                     </div>
                   </CardContent>
