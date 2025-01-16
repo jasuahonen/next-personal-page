@@ -66,11 +66,11 @@ export default function Hero() {
           <span className="text-gray-200">Engineer</span>
         </h1>
         <p className="max-w-md text-lg text-gray-300">
-          27-year-old software engineer with a passion for creating innovative solutions. Interested in Cybersecurity and IoT 🔐💻
+          27-year-old software engineer with a passion for creating innovative solutions. Interested in Cybersecurity, IoT and UI/UX design 🎨 🔐 💻
           <br /><br />
           Currently pursuing a Bachelor's degree at Tampere University of Applied Sciences 🎓
           <br /><br />
-          On my free time I like to play golf and play fetch with my dog ⛳️🐶
+          On my free time I like to play golf and play fetch with my dog ⛳️ 🐶
         </p>
       </motion.div>
       <motion.div
@@ -109,25 +109,25 @@ export default function Hero() {
                     </div>
                   </CardContent>
                 </Card>
-                <AnimatePresence>
-                  {expandedCert === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="mt-2 bg-gray-800/50 backdrop-blur-sm rounded-md p-2"
-                    >
-                      <ul className="text-sm text-gray-300">
-                        {cert.details.map((detail, idx) => (
-                          <li key={idx} className="mb-1">{detail}</li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </motion.div>
             ))}
           </div>
+          <AnimatePresence>
+            {expandedCert !== null && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="mt-4 bg-gray-800/50 backdrop-blur-sm rounded-md p-4 w-full max-w-md mx-auto"
+              >
+                <ul className="text-sm text-gray-300">
+                  {certifications[expandedCert].details.map((detail, idx) => (
+                    <li key={idx} className="mb-1">{detail}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </motion.div>
     </section>
