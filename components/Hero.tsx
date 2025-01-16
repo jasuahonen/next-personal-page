@@ -89,7 +89,7 @@ export default function Hero() {
           />
         </div>
         <div className="space-y-2">
-          <h3 className="mb-2 text-center text-lg font-semibold">Certifications</h3>
+          <h3 className="mb-2 text-center text-lg font-semibold gray-200">Certifications</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {certifications.map((cert, index) => (
               <motion.div
@@ -99,13 +99,13 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card
-                  className="w-24 bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 transition-colors cursor-pointer"
+                  className="w-16 md:w-24 bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 transition-colors cursor-pointer"
                   onClick={() => setExpandedCert(expandedCert === index ? null : index)}
                 >
-                  <CardContent className="p-4">
+                  <CardContent className="p-2 md:p-4">
                     <div className="flex flex-col items-center justify-center">
-                      <cert.icon className={`text-3xl mb-2 ${cert.iconColor}`} />
-                      <span className="text-lg font-medium text-primary">{cert.count}</span>
+                      <cert.icon className={`text-2xl md:text-3xl mb-1 md:mb-2 ${cert.iconColor}`} />
+                      <span className="text-base md:text-lg font-medium text-primary">{cert.count}</span>
                     </div>
                   </CardContent>
                 </Card>

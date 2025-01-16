@@ -39,7 +39,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl font-bold font-playfair text-gray-200 mb-6">Featured Projects</h2>
+      <h2 className="text-xl md:text-2xl font-bold font-playfair text-gray-200 mb-6">Featured Projects</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
@@ -50,17 +50,21 @@ export default function Projects() {
           >
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
               <Card className="bg-black/50 backdrop-blur-sm border-gray-700 hover:bg-gray-900/50 transition-all duration-300 cursor-pointer group">
-                <CardHeader className="flex flex-row items-center gap-4 space-y-0">
-                  <project.icon className="w-8 h-8 text-gray-200" />
+                <CardHeader className="flex flex-row items-center gap-2 md:gap-4 space-y-0 p-4 md:p-6">
+                  <project.icon className="hidden md:block w-6 h-6 md:w-8 md:h-8 text-gray-200" />
                   <div>
-                    <CardTitle className="text-xl font-playfair text-gray-200">{project.title}</CardTitle>
-                    <CardDescription className="text-gray-400">{project.description}</CardDescription>
+                    <CardTitle className="text-lg md:text-xl font-playfair text-gray-200">{project.title}</CardTitle>
+                    <CardDescription className="text-sm md:text-base text-gray-400">{project.description}</CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                <CardContent className="p-4 md:p-6 pt-0">
+                  <div className="flex flex-wrap gap-1.5 md:gap-2">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="outline" className="bg-gray-800/50 text-gray-200 border-gray-700">
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="bg-gray-800/50 text-gray-200 border-gray-700 text-xs md:text-sm px-2 py-0.5"
+                      >
                         {tech}
                       </Badge>
                     ))}

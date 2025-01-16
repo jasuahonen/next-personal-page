@@ -10,12 +10,12 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 bg-black/50 backdrop-blur-sm">
-      <h1 className="text-2xl font-bold font-playfair">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 md:p-6 bg-black/50 backdrop-blur-sm">
+      <h1 className="text-xl md:text-2xl font-bold font-playfair">
         <span className="text-gray-200">Jasu Ahonen</span>
       </h1>
       <nav>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-3 md:space-x-4">
           {[
             { icon: FaGithub, href: 'https://github.com/jasuahonen', hoverColor: 'hover:text-gray-400' },
             { icon: FaLinkedin, href: 'https://linkedin.com/in/jasu-ahonen', hoverColor: 'hover:text-blue-500' },
@@ -30,7 +30,7 @@ export default function Header() {
                   rel="noopener noreferrer"
                   className={`text-white transition-colors ${hoverColor}`}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="w-5 h-5 md:w-6 md:h-6" />
                 </a>
               ) : (
                 <button
@@ -38,7 +38,7 @@ export default function Header() {
                   className={`text-white transition-colors ${hoverColor}`}
                   aria-label={ariaLabel}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
               )}
             </motion.li>

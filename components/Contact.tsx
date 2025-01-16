@@ -22,7 +22,7 @@ export default function Contact() {
 
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl font-bold font-playfair text-gray-200 mb-6">Contact Me</h2>
+      <h2 className="text-xl md:text-2xl font-bold font-playfair text-gray-200 mb-6">Contact Me</h2>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
