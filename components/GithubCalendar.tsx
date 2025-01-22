@@ -8,7 +8,7 @@ const GitHubContributions = () => {
   const [year, setYear] = useState(new Date().getFullYear()); // Default to current year
 
   // Generate a list of past years (e.g., last 5 years)
-  const years = Array.from({ length: 5 }, (_, i) => new Date().getFullYear() - i);
+  const years = Array.from({ length: 4 }, (_, i) => new Date().getFullYear() - i);
 
   return (
     <div className="flex flex-col items-center">

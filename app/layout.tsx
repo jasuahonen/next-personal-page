@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
 
 export const metadata = {
-  title: 'Modern Portfolio',
+  title: 'Hello - Jasu Ahonen',
   description: 'A showcase of my work and skills',
 }
 

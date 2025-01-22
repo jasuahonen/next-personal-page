@@ -15,10 +15,10 @@ const certifications = [
     count: 4,
     iconColor: "text-gray-400",
     details: [
-      "CompTIA Security+",
-      "Cybersecurity Architect",
-      "Elements of Cloud and Cybersecurity",
-      "Cybersecurity Fundamentals"
+      "CompTIA Security+ (C)",
+      "Cybersecurity Architect (B)",
+      "Elements of Cloud and Cybersecurity (B)",
+      "Cybersecurity Fundamentals (B)"
     ]
   },
   {
@@ -26,9 +26,9 @@ const certifications = [
     count: 3,
     iconColor: "text-blue-500",
     details: [
-      "Azure Fundamentals",
-      "Azure Administrator",
-      "Azure Security Technologies"
+      "Azure Fundamentals (B)",
+      "Azure Administrator (B)",
+      "Azure Security Technologies (B)"
     ]
   },
   {
@@ -36,7 +36,7 @@ const certifications = [
     count: 1,
     iconColor: "text-yellow-500",
     details: [
-      "AWS Certified Cloud Practitioner",
+      "AWS Certified Cloud Practitioner (C)",
     ]
   },
   {
@@ -44,7 +44,7 @@ const certifications = [
     count: 1,
     iconColor: "text-blue-300",
     details: [
-      "Cisco Certified Network Associate (CCNA)"
+      "Cisco Certified Network Associate (CCNA) (C)"
     ]
   },
 ]
@@ -89,7 +89,7 @@ export default function Hero() {
           />
         </div>
         <div className="space-y-2">
-          <h3 className="mb-2 text-center text-lg font-semibold gray-200">Certifications</h3>
+          <h3 className="mb-2 text-center text-lg font-semibold gray-200">Certifications & Badges</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {certifications.map((cert, index) => (
               <motion.div
