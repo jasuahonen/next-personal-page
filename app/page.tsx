@@ -1,9 +1,8 @@
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import GithubContributions from '../components/GithubContributions'
+import GithubCalendar from '../components/GithubCalendar'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
-import GithubCalendar from '../components/GithubCalendar'
 
 export default function Home() {
   return (

@@ -5,8 +5,13 @@ import { FaGithub, FaLinkedin, FaInstagram, FaFileDownload } from 'react-icons/f
 
 export default function Header() {
   const downloadCV = () => {
-    // Implement CV download logic here
-    console.log('Downloading CV...')
+    // Create a link element
+    const link = document.createElement('a')
+    link.href = '/JA-CV-2025.pdf' // Path to your CV in the public folder
+    link.download = 'Jasu-Ahonen-CV.pdf' // Name for the downloaded file
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (

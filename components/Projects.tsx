@@ -1,15 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { FaReact, FaBriefcase, FaMobile, FaCar } from 'react-icons/fa'
+import { FaBriefcase, FaCar, FaUser, FaMapPin } from 'react-icons/fa'
 
 const projects = [
   {
     title: 'React Portfolio',
     description: 'A React Portfolio Website',
-    icon: FaReact,
+    icon: FaUser,
     technologies: ['JavaScript', 'HTML', 'SCSS'],
     githubUrl: 'https://github.com/jasuahonen/react-portfolio'
   },
@@ -23,7 +23,7 @@ const projects = [
   {
     title: 'Map Application',
     description: 'Basic map application with location tracking and markers for iOS',
-    icon: FaMobile,
+    icon: FaMapPin,
     technologies: ['XCode', 'SwiftUI'],
     githubUrl: 'https://github.com/jasuahonen/SwiftUI-MapApp'
   },
@@ -51,7 +51,6 @@ export default function Projects() {
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
               <Card className="bg-black/50 backdrop-blur-sm border-gray-700 hover:bg-gray-900/50 transition-all duration-300 cursor-pointer group">
                 <CardHeader className="flex flex-row items-center gap-2 md:gap-4 space-y-0 p-4 md:p-6">
-                  <project.icon className="hidden md:block w-6 h-6 md:w-8 md:h-8 text-gray-200" />
                   <div>
                     <CardTitle className="text-lg md:text-xl font-playfair text-gray-200">{project.title}</CardTitle>
                     <CardDescription className="text-sm md:text-base text-gray-400">{project.description}</CardDescription>
