@@ -68,7 +68,7 @@ export default function Hero() {
         <p className="max-w-md text-lg text-gray-300">
           27-year-old software engineer with a passion for creating innovative solutions. Interested in Cybersecurity, IoT and UI/UX design 🎨 🔐 💻
           <br /><br />
-          Currently pursuing a Bachelor's degree at Tampere University of Applied Sciences 🎓
+          Currently pursuing a Bachelor&apos;s degree at Tampere University of Applied Sciences 🎓
           <br /><br />
           On my free time I like to play golf and play fetch with my dog ⛳️ 🐶
         </p>

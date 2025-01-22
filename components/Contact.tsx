@@ -31,7 +31,7 @@ export default function Contact() {
       >
         <div className="space-y-4">
           <p className="text-gray-300">
-            I'm always open to new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out! 👋
+            I&apos;m always open to new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out! 👋
           </p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
